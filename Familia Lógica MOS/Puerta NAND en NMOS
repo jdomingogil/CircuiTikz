@@ -1,0 +1,27 @@
+% Familia Lógica MOS - Puerta NAND en NMOS
+% MOS Logic Family  - NAND Gate using NMOS
+
+% Author: José Domingo Gil Iglesias
+% Date: April, 2025
+
+\documentclass[border=10pt]{standalone}
+\usepackage[american, siunitx]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+    \ctikzset{tripoles/mos style/arrows}
+    \ctikzset{transistors/arrow pos=end}    
+    
+    \draw (0,0) node[nmos] (na) {\(N2\)}
+    (na.G) to[short, -o] ++(-1,0) node[left] {\(A\)}
+    (na.D) --++(1,0) node[right] {\(V_{out}\)}
+    (0,-1.5) node[nmos] (nb) {\(N3\)}
+    (nb.G) to[short, -o] ++(-1,0) node[left] {\(B\)}
+    (nb.S) node[ground] {} 
+    (0,1.5) node[nmos] (nr) {\(N1\)}
+    (nr.G) -|++(-0.5,1) coordinate(b) -- (b-|nr.D) -- (nr.D)
+    (nr.D) to[short, -o] ++(0,1) node[above] {\(V_D\)};    
+\end{circuitikz}
+
+\end{document}
