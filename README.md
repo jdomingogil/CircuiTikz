@@ -1,2 +1,1 @@
-Bienvenido a CircuiTikz.  
-En este repositorio encontrarás diferentes circuitos electrónicos codificados en LaTeX utilizando el paquete CircuiTikz. Podrás visualizar y/o copiar el código para que puedas utilizarlo en tus proyectos, así como, descargar el fichero pdf del circuito que se implementa.
+CircuiTikz es un repositorio que contiene la implementación de circuitos eléctricos y electrónicos estándares codificados en LaTeX, así como, otros circuitos tratados como problemas en exámenes de diferentes universidades.
