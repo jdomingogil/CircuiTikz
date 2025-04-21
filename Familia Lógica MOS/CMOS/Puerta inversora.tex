@@ -1,0 +1,26 @@
+% Familia Lógica MOS - Puerta inversora en CMOS
+% MOS Logic Family  - CMOS Gate Inverter
+
+% Author: José Domingo Gil Iglesias
+% Date: April, 2025
+
+\documentclass[border=10pt]{standalone}
+\usepackage[american, siunitx]{circuitikz}
+
+\begin{document}  
+
+\begin{circuitikz}
+    \ctikzset{tripoles/mos style/arrows}
+    \ctikzset{transistors/arrow pos=end}    
+    
+    \draw (0,0) node[nmos] (n) {\(N\)}
+        (n.D) to[short, *-o] ++(1,0) node[right] {\(V_{out}\)}
+        (0,1.5) node[pmos, nocircle, yscale=-1] (p) {} node[right] {\(P\)}
+        (p.G) -- (n.G)
+        (n.G |- n.D) to[short, *-o] ++(-1,0) node[left] {\(V_{in}\)}  
+        (p.D) to[short, -o] ++(0,0.5) node[above] {\(V_D\)} 
+        (n.S) node[ground] {}
+    ;
+\end{circuitikz}
+
+\end{document}
